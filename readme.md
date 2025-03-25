@@ -39,10 +39,15 @@ Before starting training, you need to build the c++/cython style external packag
 cd core/ctree
 bash make.sh
 
-Any and all questions related to this project are welcome at slucoris@gmail.com
+AND
 
-Any and all further improvements to this project will be looked at, discussed, and highly likely accepted.
+cd core/muzero_ctree
+bash make.sh
 
-The environment is separated from the model so if someone wants to add an additional model to this environment, they are welcome to do so following the same examples as the current model is set up.
+AND
+
+cd core/muzero_ctree
+python setup.py
+
 
 If anyone wants to participate in the project, all are welcome to join the discord at https://discord.gg/cPKwGU7dbU
