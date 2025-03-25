@@ -46,18 +46,18 @@ def get_num_cpus(percentage=0.8):
 # IMPORTANT: Change this value to the percentage of CPU cores you want to use (default 80%)
 NUM_CPUS = get_num_cpus()
 
-# try:
-#     import torch
-#     # Dynamically set the device based on available hardware acceleration
-#     if torch.cuda.is_available():
-#         DEVICE = "cuda"
-#     elif torch.backends.mps.is_available(): # Apple Silicon
-#         DEVICE = "mps"
-#     else:
-#         DEVICE = "cpu"
-# except ImportError:
-#     print("WARNING: Torch import failed, may not be installed, AI capabilities not available.")
-DEVICE = "cuda"
+try:
+    import torch
+    # Dynamically set the device based on available hardware acceleration
+    if torch.cuda.is_available():
+        DEVICE = "cuda"
+    elif torch.backends.mps.is_available(): # Apple Silicon
+        DEVICE = "mps"
+    else:
+        DEVICE = "cpu"
+except ImportError:
+    print("WARNING: Torch import failed, may not be installed, AI capabilities not available.")
+#DEVICE = "cuda"
 
 IMITATION = get_bool_env("IMITATION")
 CHAMP_DECIDER = get_bool_env("CHAMP_DECIDER")
