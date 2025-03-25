@@ -38,16 +38,24 @@ Before starting training, you need to build the c++/cython style external packag
 ```
 cd core/ctree
 bash make.sh
-
+```
 AND
-
+```
 cd core/muzero_ctree
 bash make.sh
-
+```
 AND
-
+```
 cd core/muzero_ctree
 python setup.py
+```
+## Conda Environment
 
+To use the spec file to create an identical environment on the same machine or another machine:
 
-If anyone wants to participate in the project, all are welcome to join the discord at https://discord.gg/cPKwGU7dbU
+`conda create --name myenv --file spec-file.txt`
+
+To use the spec file to install its listed packages into an existing environment:
+
+`conda install --name myenv --file spec-file.txt`
+
